@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-8 lg:px-12 xl:px-16 2xl:px-24;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-ocean-600 text-white px-8 py-4 rounded-sm font-medium transition-all duration-300 hover:bg-ocean-700 hover:shadow-soft-lg;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-ocean-300 text-ocean-700 px-8 py-4 rounded-sm font-medium transition-all duration-300 hover:bg-ocean-50 hover:border-ocean-400;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-natural border border-gray-100 p-8 transition-all duration-300 hover:shadow-soft;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-light text-gray-900 leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-light text-gray-900 leading-tight;
+  }
+  
+  .text-body {
+    @apply text-gray-600 leading-relaxed;
+  }
+}

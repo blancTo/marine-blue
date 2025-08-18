@@ -1,0 +1,64 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for PR check
+      run: |
+        if [[ "${{ github.base_ref }}" == "main" ]]; then
+          echo "Building for production..."
+          npm run build
+        else
+          echo "Building for development..."
+          npm run build:develop
+        fi
+      env:
+        NODE_ENV: development
+        
+    - name: Run linting (if configured)
+      run: echo "Linting would run here"
+      
+    - name: Run tests (if configured)
+      run: echo "Tests would run here"
+      
+    - name: Upload PR build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: pr-build-${{ github.event.number }}
+        path: dist/
+        retention-days: 7
+        
+    - name: PR Check Summary
+      run: |
+        echo "## 🔍 PR Check Results" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Build successful" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Dependencies installed" >> $GITHUB_STEP_SUMMARY
+        echo "- 📁 Build artifacts uploaded" >> $GITHUB_STEP_SUMMARY
+        echo "- 🎯 Target branch: ${{ github.base_ref }}" >> $GITHUB_STEP_SUMMARY
+
+permissions:
+  contents: read
+  actions: write
+  pull-requests: read
+
+concurrency:
+  group: pr-check-${{ github.event.number }}
+  cancel-in-progress: true
