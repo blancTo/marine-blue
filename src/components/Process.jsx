@@ -1,3 +1,5 @@
+import accessBg from '../assets/images/access-bg.jpg'
+
 export default function Process() {
   const steps = [
     {
@@ -63,8 +65,17 @@ export default function Process() {
   ]
 
   return (
-    <section id="process" className="section-padding bg-white">
-      <div className="container-max">
+    <section id="process" className="section-padding relative overflow-hidden">
+      {/* 背景画像 */}
+      <div className="absolute inset-0">
+        <img 
+          src={accessBg} 
+          alt="ご利用の流れの背景" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+      </div>
+      <div className="container-max relative z-10">
         <div className="text-center mb-20">
           <h2 className="heading-lg mb-8">
             ご利用の流れ
