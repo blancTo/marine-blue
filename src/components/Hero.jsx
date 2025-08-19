@@ -1,3 +1,5 @@
+import heroOceanBg from '../assets/images/hero-ocean-bg.webp'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -7,7 +9,7 @@ export default function Hero() {
       {/* 背景画像 */}
       <div className="absolute inset-0 opacity-40">
         <img 
-          src="/src/assets/images/hero-ocean-bg.webp" 
+          src={heroOceanBg} 
           alt="静かな海の風景" 
           className="w-full h-full object-cover"
         />

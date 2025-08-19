@@ -1,3 +1,5 @@
+import oceanHeroBg from '../assets/images/ocean-hero-bg.jpg'
+
 export default function About() {
   return (
     <section id="about" className="section-padding bg-powder-50">
@@ -50,7 +52,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-soft-lg">
                 <img 
-                  src="/src/assets/images/ocean-hero-bg.jpg" 
+                  src={oceanHeroBg} 
                   alt="穏やかな海の風景" 
                   className="w-full h-full object-cover"
                 />
