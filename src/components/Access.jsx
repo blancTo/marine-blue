@@ -1,3 +1,5 @@
+import aboutUsBg from '../assets/images/about-us.jpg'
+
 export default function Access() {
   return (
     <section id="access" className="section-padding bg-white">
@@ -111,16 +113,20 @@ export default function Access() {
 
           <div>
             <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural mb-8">
-              <div className="aspect-video bg-gradient-to-br from-ocean-100 to-powder-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <svg className="w-10 h-10 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-lg font-medium text-gray-900 mb-2">広島の美しい海辺</h4>
-                  <p className="text-body text-sm">瀬戸内海の穏やかな海、歴史ある美しい街</p>
+              <div className="aspect-video relative flex items-end justify-center pb-8">
+                {/* 背景画像 */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={aboutUsBg} 
+                    alt="広島の美しい海辺" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-ocean-900/50 to-ocean-700/70"></div>
+                </div>
+                
+                <div className="relative z-10 text-center text-white">
+                  <h4 className="text-lg font-medium mb-2">私たちの散骨船</h4>
+                  <p className="text-white/90 text-sm">安全で快適な自社船で、心に残るセレモニーを</p>
                 </div>
               </div>
             </div>
