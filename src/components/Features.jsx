@@ -1,3 +1,5 @@
+import accessBg from '../assets/images/access-bg.jpg'
+
 export default function Features() {
   const features = [
     {
@@ -57,8 +59,17 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="section-padding bg-white">
-      <div className="container-max">
+    <section id="features" className="section-padding relative overflow-hidden">
+      {/* 背景画像 */}
+      <div className="absolute inset-0">
+        <img 
+          src={accessBg} 
+          alt="選ばれる理由の背景" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/75"></div>
+      </div>
+      <div className="container-max relative z-10">
         <div className="text-center mb-20">
           <h2 className="heading-lg mb-8">
             選ばれる理由

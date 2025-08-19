@@ -1,4 +1,4 @@
-import heroOceanBg from '../assets/images/hero-ocean-bg.webp'
+import heroOceanBg from '../assets/images/hero-ocean-bg.jpg'
 
 export default function Hero() {
   return (
