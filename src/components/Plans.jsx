@@ -1,3 +1,5 @@
+import ocean04 from '../assets/images/ocean-04.jpg'
+
 export default function Plans() {
   const plans = [
     {
@@ -6,7 +8,7 @@ export default function Plans() {
       description: "ご家族だけでの貸切散骨",
       features: [
         "完全貸切での散骨",
-        "最大20名まで乗船可能",
+        "最大7名まで乗船可能",
         "セレモニー進行サポート", 
         "散骨証明書発行",
         "GPS座標記録",
@@ -62,14 +64,32 @@ export default function Plans() {
   return (
     <section id="plans" className="section-padding bg-powder-50">
       <div className="container-max">
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8">
-            料金プラン
-          </h2>
-          <p className="text-xl text-body max-w-3xl mx-auto">
-            ご家族のご希望とご予算に合わせて、様々なプランをご用意しております。<br />
-            すべてのプランで法的手続きサポートが含まれています。
-          </p>
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="order-2 lg:order-1">
+            <h2 className="heading-lg mb-8">
+              料金プラン
+            </h2>
+            <p className="text-xl text-body">
+              ご家族のご希望とご予算に合わせて、様々なプランをご用意しております。
+              すべてのプランで法的手続きサポートが含まれており、明朗会計で安心してご利用いただけます。
+            </p>
+          </div>
+          <div className="order-1 lg:order-2">
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-soft-lg">
+                <img 
+                  src={ocean04} 
+                  alt="料金プランを表す海の風景" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-soft-lg">
+                <svg className="w-12 h-12 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
@@ -111,6 +131,8 @@ export default function Plans() {
             </div>
           ))}
         </div>
+
+
 
         {/* 料金に関する注意事項 */}
         <div className="bg-white rounded-lg p-8 shadow-natural border border-gray-100">

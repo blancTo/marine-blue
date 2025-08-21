@@ -65,7 +65,18 @@ export default function Access() {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">受付時間</h4>
-                    <p className="text-body">24時間365日対応<br />（セレモニーは9:00～17:00）</p>
+                    <p className="text-body">お電話：8:00～20:00<br />メール：24時間対応<br />（セレモニーは9:00～17:00）</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-ocean-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">主要事業</h4>
+                    <p className="text-body">主要旅客船<br />海洋散骨事業<br />チャーター船<br />観光船<br />海上タクシー</p>
                   </div>
                 </div>
               </div>
@@ -112,23 +123,19 @@ export default function Access() {
           </div>
 
           <div>
-            <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural mb-8">
-              <div className="aspect-video relative flex items-end justify-center pb-8">
-                {/* 背景画像 */}
-                <div className="absolute inset-0">
-                  <img 
-                    src={aboutUsBg} 
-                    alt="広島の美しい海辺" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-ocean-900/50 to-ocean-700/70"></div>
-                </div>
-                
-                <div className="relative z-10 text-center text-white">
-                  <h4 className="text-lg font-medium mb-2">私たちの散骨船</h4>
-                  <p className="text-white/90 text-sm">安全で快適な自社船で、心に残るセレモニーを</p>
-                </div>
+            <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural mb-6">
+              <div className="aspect-video">
+                <img 
+                  src={aboutUsBg} 
+                  alt="広島の美しい海辺" 
+                  className="w-full h-full object-cover"
+                />
               </div>
+            </div>
+            
+            <div className="text-center mb-8">
+              <h4 className="text-lg font-medium mb-2 text-gray-900">私たちの散骨船</h4>
+              <p className="text-body">7名乗船可能な小型船で、アットホームな心に残るセレモニーを</p>
             </div>
 
             <div className="card">

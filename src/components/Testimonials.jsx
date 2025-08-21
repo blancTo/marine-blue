@@ -1,3 +1,5 @@
+import ocean05 from '../assets/images/ocean-05.jpg'
+
 export default function Testimonials() {
   const testimonials = [
     {
@@ -29,14 +31,32 @@ export default function Testimonials() {
   return (
     <section className="section-padding bg-powder-50">
       <div className="container-max">
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8">
-            お客様の声
-          </h2>
-          <p className="text-xl text-body max-w-3xl mx-auto">
-            Ocean Memorialをご利用いただいたお客様からの<br />
-            心温まるお声をご紹介いたします。
-          </p>
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-soft-lg">
+                <img 
+                  src={ocean05} 
+                  alt="お客様の声を表す心温まる海の景色" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-soft-lg">
+                <svg className="w-12 h-12 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="heading-lg mb-8">
+              お客様の声
+            </h2>
+            <p className="text-xl text-body">
+              Ocean Memorialをご利用いただいたお客様からの心温まるお声をご紹介いたします。
+              多くのご家族に選ばれ続けている理由を、実際のお客様の体験談でお確かめください。
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -75,6 +95,8 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
+
 
         {/* 統計セクション */}
         <div className="bg-white rounded-lg p-8 shadow-natural border border-gray-100">
