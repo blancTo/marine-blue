@@ -1,13 +1,23 @@
 import oceanHeroBg from '../assets/images/ocean-hero-bg.jpg'
+import ocean03 from '../assets/images/ocean-03.jpg'
 
 export default function About() {
   return (
     <section id="about" className="section-padding bg-powder-50">
       <div className="container-max">
         <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8">
-            海洋散骨について
-          </h2>
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-20 h-20 rounded-full overflow-hidden shadow-soft-lg mr-4">
+              <img 
+                src={ocean03} 
+                alt="海洋散骨について" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="heading-lg">
+              海洋散骨について
+            </h2>
+          </div>
           <p className="text-xl text-body max-w-3xl mx-auto">
             人は海から生まれたとも言われています。海洋散骨が「海へ還る」と言われる所以です。<br />
             大自然の中に戻ってゆく、そんな安らぎを、私たちがお手伝いいたします。
@@ -65,6 +75,8 @@ export default function About() {
             </div>
           </div>
         </div>
+
+
 
         {/* 海洋散骨の意味 */}
         <div className="bg-white rounded-lg p-12 shadow-natural border border-gray-100">

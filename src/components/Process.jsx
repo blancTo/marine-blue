@@ -1,4 +1,4 @@
-import accessBg from '../assets/images/access-bg.jpg'
+import ocean02 from '../assets/images/ocean-02.jpg'
 
 export default function Process() {
   const steps = [
@@ -65,25 +65,34 @@ export default function Process() {
   ]
 
   return (
-    <section id="process" className="section-padding relative overflow-hidden">
-      {/* 背景画像 */}
-      <div className="absolute inset-0">
-        <img 
-          src={accessBg} 
-          alt="ご利用の流れの背景" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
-      </div>
-      <div className="container-max relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8">
-            ご利用の流れ
-          </h2>
-          <p className="text-xl text-body max-w-3xl mx-auto">
-            初めての方でも安心してご利用いただけるよう、<br />
-            お問い合わせから散骨完了まで丁寧にサポートいたします。
-          </p>
+    <section id="process" className="section-padding bg-powder-50">
+      <div className="container-max">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-soft-lg">
+                <img 
+                  src={ocean02} 
+                  alt="ご利用の流れを表す穏やかな海の風景" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-soft-lg">
+                <svg className="w-12 h-12 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="heading-lg mb-8">
+              ご利用の流れ
+            </h2>
+            <p className="text-xl text-body">
+              初めての方でも安心してご利用いただけるよう、お問い合わせから散骨完了まで丁寧にサポートいたします。
+              経験豊富なスタッフが、すべての工程で寄り添いご案内いたします。
+            </p>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -115,6 +124,8 @@ export default function Process() {
           ))}
         </div>
 
+
+
         {/* よくある質問セクション */}
         <div className="mt-20 bg-powder-50 rounded-lg p-8">
           <div className="text-center mb-8">
@@ -133,7 +144,7 @@ export default function Process() {
             </div>
             <div className="bg-white rounded-lg p-6 shadow-natural">
               <h4 className="font-medium text-gray-900 mb-2">何名まで乗船できますか？</h4>
-              <p className="text-body text-sm">プランにより異なりますが、最大50名様まで乗船可能な大型船をご用意しております。</p>
+              <p className="text-body text-sm">最大7名様まで乗船可能な小型船で、アットホームなセレモニーを実現いたします。</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-natural">
               <h4 className="font-medium text-gray-900 mb-2">散骨後の供養は？</h4>
