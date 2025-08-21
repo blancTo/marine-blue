@@ -12,8 +12,7 @@ export default function Hero() {
         />
       </div>
       
-      {/* 背景オーバーレイ - スマホでは透明度を下げて海をより見せる */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ocean-50/20 via-white/10 to-ocean-100/25 md:from-ocean-50/60 md:via-white/40 md:to-ocean-100/50"></div>
+
       
       {/* 装飾的な波のアニメーション */}
       <div className="absolute bottom-0 left-0 w-full h-32 opacity-20">
