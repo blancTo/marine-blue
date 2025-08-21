@@ -1,20 +1,20 @@
 export default function Ship() {
   const shipFeatures = [
     {
-      title: "最大50名乗船可能",
-      description: "大型船なので多くのご家族・ご親族にご参加いただけます"
+      title: "最大7名乗船可能",
+      description: "小型船ならではのアットホームで心温まるセレモニー"
     },
     {
       title: "高い安全性・安定性",
-      description: "海況に左右されにくい安定した船体設計"
+      description: "経験豊富な船長による安全運航で安心してご参加いただけます"
     },
     {
       title: "快適な船内設備",
-      description: "冷暖房完備で季節を問わず快適にお過ごしいただけます"
+      description: "清潔で快適な船内で、故人様との大切な時間をお過ごしください"
     },
     {
-      title: "バリアフリー対応",
-      description: "車椅子でのご乗船も可能です"
+      title: "きめ細やかな配慮",
+      description: "少人数だからこそ可能な、一人ひとりに寄り添ったサービス"
     }
   ]
 
@@ -51,15 +51,15 @@ export default function Ship() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">定員</span>
-                  <span className="font-medium">最大50名</span>
+                  <span className="font-medium">最大7名</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">全長</span>
-                  <span className="font-medium">18.5m</span>
+                  <span className="font-medium">12.5m</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">設備</span>
-                  <span className="font-medium">冷暖房・トイレ完備</span>
+                  <span className="font-medium">快適な座席・安全設備完備</span>
                 </div>
               </div>
             </div>
