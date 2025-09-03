@@ -1,4 +1,5 @@
 import aboutUsBg from '../assets/images/about-us.jpg'
+import aboutUs2 from '../assets/images/about-us2.jpg'
 
 export default function Access() {
   return (
@@ -14,6 +15,7 @@ export default function Access() {
           </p>
         </div>
 
+
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <div className="card mb-8">
@@ -28,6 +30,17 @@ export default function Access() {
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">屋号</h4>
                     <p className="text-body">マリンブルー</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-ocean-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-1">登録事業</h4>
+                    <p className="text-body">海上運送　一般不定期航路事業登録済み</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -123,18 +136,30 @@ export default function Access() {
           </div>
 
           <div>
-            <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural mb-6">
-              <div className="aspect-video">
-                <img 
-                  src={aboutUsBg} 
-                  alt="広島の美しい海辺" 
-                  className="w-full h-full object-cover"
-                />
+            <div className="grid gap-6 mb-8">
+              <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural">
+                <div className="aspect-video">
+                  <img 
+                    src={aboutUsBg} 
+                    alt="広島の美しい海辺" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              <div className="bg-powder-100 rounded-lg overflow-hidden shadow-natural">
+                <div className="aspect-video">
+                  <img 
+                    src={aboutUs2} 
+                    alt="私たちの散骨船とサービス" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
             
             <div className="text-center mb-8">
-              <h4 className="text-lg font-medium mb-2 text-gray-900">私たちの散骨船</h4>
+              <h4 className="text-lg font-medium mb-2 text-gray-900">私たちの散骨船とサービス</h4>
               <p className="text-body">7名乗船可能な小型船で、アットホームな心に残るセレモニーを</p>
             </div>
 

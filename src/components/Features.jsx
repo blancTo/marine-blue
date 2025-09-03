@@ -4,7 +4,7 @@ export default function Features() {
   const features = [
     {
       title: "信頼の実績",
-      description: "20年以上の海洋散骨実績を持ち、これまで多くのご家族の大切な想いをお手伝いしてまいりました。",
+      description: "これまで多くのご家族の大切な想いをお手伝いし、豊富な海洋散骨実績を積み重ねてまいりました。",
       icon: (
         <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -55,6 +55,15 @@ export default function Features() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       )
+    },
+    {
+      title: "保険加入で乗船も安心",
+      description: "散骨を行う自社船舶の保険に加入しているほか、乗船されるお客様一人ひとりの当日の保険にも加入しますので、安心です。保険料は各プランの料金に含まれています。",
+      icon: (
+        <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      )
     }
   ]
 
@@ -68,7 +77,7 @@ export default function Features() {
             </h2>
             <p className="text-lg md:text-xl text-body">
               私たちは故人様とご遺族の想いを大切に、心に残るセレモニーをお手伝いいたします。
-              20年以上の実績と経験で、ご家族の想いに寄り添った散骨セレモニーを実現いたします。
+              豊富な実績と経験で、ご家族の想いに寄り添った散骨セレモニーを実現いたします。
             </p>
           </div>
           <div className="order-1 lg:order-2">
