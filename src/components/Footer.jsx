@@ -16,7 +16,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/80 mb-8 leading-relaxed max-w-md">
-              大切な方との最後のお別れを、美しい海で。20年以上の実績と信頼で、ご遺族の想いに寄り添います。
+              大切な方との最後のお別れを、美しい海で。豊富な実績と信頼で、ご遺族の想いに寄り添います。
             </p>
             <div className="space-y-3">
               <a href="tel:0120-123-456" className="flex items-center text-white hover:text-white/80 transition-colors">

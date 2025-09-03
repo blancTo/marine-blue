@@ -4,18 +4,9 @@ export default function Process() {
   const steps = [
     {
       number: "01",
-      title: "お問い合わせ",
-      description: "お電話またはメールフォームからお気軽にご相談ください。24時間365日、ご質問やご不明な点について丁寧にご説明いたします。",
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-      )
-    },
-    {
-      number: "02", 
-      title: "ご相談・お見積り",
-      description: "ご希望やご予算に応じた最適なプランをご提案し、詳細なお見積りをお出しいたします。料金体系は明確で、当日の追加料金は一切ございません。",
+      title: "お申し込み",
+      description: "ご家族の間で散骨について十分に理解し合えるよう、話し合ってお申し込みください。（ご遺骨を全て散骨するのか、一部は埋葬するのかなど）日時を決め、出航場所・散骨海域などをご案内します。（天候や海況によって、日程の変更もございます。）",
+      note: "※ お申し込み時に、「埋葬許可証」を確認させていただきます。",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -23,29 +14,29 @@ export default function Process() {
       )
     },
     {
-      number: "03",
-      title: "お申し込み・準備",
-      description: "ご契約後、散骨に必要な法的手続きをすべて代行いたします。当日に向けてセレモニーの詳細についてもご相談させていただきます。",
+      number: "02", 
+      title: "ご遺骨お預かり",
+      description: "ご遺骨をパウダー状に加工するためにお預かりいたします。パウダー状のご遺骨を水溶性用紙に包みご準備します。（同行される人数に応じて準備数を決めます。）",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+      )
+    },
+    {
+      number: "03",
+      title: "出航",
+      description: "指定場所へ集合し、乗船します。服装は喪服でなく普段着で大丈夫です。転倒しないよう、ヒールの高い靴や滑りやすい靴は、避けた方がいいでしょう。",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 13v-1a4 4 0 014-4 4 4 0 014 4v1h1a1 1 0 011 1v6a1 1 0 01-1 1H7a1 1 0 01-1-1v-6a1 1 0 011-1h1zM10 12a2 2 0 114 0" />
         </svg>
       )
     },
     {
       number: "04",
-      title: "日程調整",
-      description: "海況や天候を考慮して、散骨に適した日程を調整いたします。ご家族のご都合に合わせて柔軟に対応し、最適な日時をご提案いたします。",
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      )
-    },
-    {
-      number: "05",
-      title: "散骨セレモニー",
-      description: "経験豊富なスタッフがご案内し、心に残る散骨セレモニーを執り行います。故人様への想いを込めた、安全で厳かな時間をお過ごしいただけます。",
+      title: "散骨式",
+      description: "船上から散骨、献花（献酒）を行い黙祷します。読経をいただく場合は、散骨の前にお勤めいただきます。",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -53,12 +44,22 @@ export default function Process() {
       )
     },
     {
-      number: "06",
-      title: "アフターサポート",
-      description: "散骨完了後、GPS座標を記載した散骨証明書を発行いたします。継続的なメモリアルサポートもご提供し、いつでもご相談いただけます。",
+      number: "05",
+      title: "帰港・解散",
+      description: "セレモニー終了後、港へ帰港し解散いたします。故人様との最後の時間を大切に、心を込めてお見送りいたします。",
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        </svg>
+      )
+    },
+    {
+      number: "06",
+      title: "散骨証明書発行",
+      description: "後日、散骨証明書をお届けします。GPS座標を記載した証明書で、故人様が眠る場所を永続的に記録いたします。",
+      icon: (
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       )
     }
@@ -89,8 +90,8 @@ export default function Process() {
               ご利用の流れ
             </h2>
             <p className="text-xl text-body">
-              初めての方でも安心してご利用いただけるよう、お問い合わせから散骨完了まで丁寧にサポートいたします。
-              経験豊富なスタッフが、すべての工程で寄り添いご案内いたします。
+              広島湾での散骨をお考えの方へ、お問い合わせから散骨完了まで丁寧にサポートいたします。
+              必要な書類や手続きも含めて、経験豊富なスタッフがすべての工程でご案内いたします。
             </p>
           </div>
         </div>
@@ -113,6 +114,9 @@ export default function Process() {
                 <div className="flex-1 pt-2">
                   <h3 className="text-xl font-medium text-gray-900 mb-3">{step.title}</h3>
                   <p className="text-body leading-relaxed">{step.description}</p>
+                  {step.note && (
+                    <p className="text-sm text-ocean-600 mt-2 font-medium">{step.note}</p>
+                  )}
                 </div>
               </div>
 
@@ -124,7 +128,45 @@ export default function Process() {
           ))}
         </div>
 
-
+        {/* 散骨場所マップセクション */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="heading-md mb-6">散骨エリア</h3>
+            <p className="text-lg text-body max-w-2xl mx-auto">
+              広島湾の美しい海域で散骨セレモニーを行います。<br />
+              穏やかで透明度の高い海で、故人様を自然の中へとお送りいたします。
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-natural border border-gray-100 p-6">
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52563.89234!2d132.4!3d34.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE4JzAwLjAiTiAxMzLCsDI0JzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+                width="100%" 
+                height="100%" 
+                style={{border: 0}}
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="散骨エリア - 広島湾"
+              ></iframe>
+            </div>
+            <div className="mt-4 text-center">
+              <a 
+                href="https://maps.app.goo.gl/WPBrFLwkLCTAWMVo7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-ocean-600 hover:text-ocean-700 transition-colors"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Googleマップで詳細を見る
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* よくある質問セクション */}
         <div className="mt-20 bg-powder-50 rounded-lg p-8">

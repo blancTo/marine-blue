@@ -17,7 +17,7 @@ export default function Testimonials() {
     {
       name: "佐藤様ご夫婦",
       location: "静岡県",
-      content: "20年以上の実績があるということで安心してお任せできました。当日も天候に恵まれ、穏やかで美しい思い出となりました。心に残る素晴らしいセレモニーでした。",
+      content: "豊富な実績があるということで安心してお任せできました。当日も天候に恵まれ、穏やかで美しい思い出となりました。心に残る素晴らしいセレモニーでした。",
       rating: 5
     },
     {
@@ -101,7 +101,7 @@ export default function Testimonials() {
         {/* 統計セクション */}
         <div className="bg-white rounded-lg p-8 shadow-natural border border-gray-100">
           <div className="text-center mb-8">
-            <h3 className="heading-md mb-4">20年以上の実績</h3>
+            <h3 className="heading-md mb-4">豊富な実績</h3>
             <p className="text-body max-w-2xl mx-auto">
               多くのご家族に選ばれ続けている、私たちの実績をご紹介いたします。
             </p>
@@ -117,7 +117,7 @@ export default function Testimonials() {
               <div className="text-sm text-body">お客様満足度</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-light text-ocean-600 mb-2">20年+</div>
+              <div className="text-3xl font-light text-ocean-600 mb-2">実績</div>
               <div className="text-sm text-body">サービス提供年数</div>
             </div>
           </div>
