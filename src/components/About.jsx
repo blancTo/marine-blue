@@ -46,7 +46,7 @@ export default function About() {
                 <div className="w-3 h-3 bg-ocean-600 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="font-medium text-gray-900 mb-1">経験豊富なスタッフ</h4>
-                  <p className="text-body text-sm">20年以上の実績を持つ専門スタッフが丁寧にご案内</p>
+                  <p className="text-body text-sm">豊富な実績を持つ専門スタッフが丁寧にご案内</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

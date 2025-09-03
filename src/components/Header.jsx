@@ -26,33 +26,49 @@ export default function Header() {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl font-medium text-gray-900">マリンブルー</h1>
-              <p className="text-xs text-gray-500">海洋散骨サービス</p>
+              <h1 className={`text-xl font-medium transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>マリンブルー</h1>
+              <p className={`text-xs transition-colors duration-300 ${
+                isScrolled ? 'text-gray-500' : 'text-white/80'
+              }`}>海洋散骨サービス</p>
             </div>
           </div>
 
           {/* ナビゲーション */}
           <nav className="hidden md:flex items-center space-x-12">
-            <a href="#about" className="text-gray-600 hover:text-ocean-600 transition-colors duration-200 font-medium">
+            <a href="#about" className={`transition-colors duration-200 font-medium ${
+              isScrolled ? 'text-gray-600 hover:text-ocean-600' : 'text-white hover:text-ocean-200'
+            }`}>
               サービスについて
             </a>
-            <a href="#features" className="text-gray-600 hover:text-ocean-600 transition-colors duration-200 font-medium">
+            <a href="#features" className={`transition-colors duration-200 font-medium ${
+              isScrolled ? 'text-gray-600 hover:text-ocean-600' : 'text-white hover:text-ocean-200'
+            }`}>
               特徴
             </a>
-            <a href="#plans" className="text-gray-600 hover:text-ocean-600 transition-colors duration-200 font-medium">
+            <a href="#plans" className={`transition-colors duration-200 font-medium ${
+              isScrolled ? 'text-gray-600 hover:text-ocean-600' : 'text-white hover:text-ocean-200'
+            }`}>
               料金プラン
             </a>
-            <a href="#process" className="text-gray-600 hover:text-ocean-600 transition-colors duration-200 font-medium">
+            <a href="#process" className={`transition-colors duration-200 font-medium ${
+              isScrolled ? 'text-gray-600 hover:text-ocean-600' : 'text-white hover:text-ocean-200'
+            }`}>
               流れ
             </a>
-            <a href="#access" className="text-gray-600 hover:text-ocean-600 transition-colors duration-200 font-medium">
+            <a href="#access" className={`transition-colors duration-200 font-medium ${
+              isScrolled ? 'text-gray-600 hover:text-ocean-600' : 'text-white hover:text-ocean-200'
+            }`}>
               アクセス
             </a>
           </nav>
 
           {/* お問い合わせボタン */}
           <div className="flex items-center space-x-4">
-            <a href="tel:0120-123-456" className="hidden sm:flex items-center space-x-2 text-ocean-600 hover:text-ocean-700 transition-colors duration-200">
+            <a href="tel:0120-123-456" className={`hidden sm:flex items-center space-x-2 transition-colors duration-200 ${
+              isScrolled ? 'text-ocean-600 hover:text-ocean-700' : 'text-white hover:text-ocean-200'
+            }`}>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
@@ -68,7 +84,9 @@ export default function Header() {
             className="md:hidden w-8 h-8 flex items-center justify-center"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-5 h-5 transition-colors duration-300 ${
+              isScrolled ? 'text-gray-600' : 'text-white'
+            }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
