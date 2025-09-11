@@ -1,6 +1,6 @@
 import ocean02 from '../assets/images/ocean-02.jpg'
 
-export default function Process() {
+export default function Process({ onOpenContactForm }) {
   const steps = [
     {
       number: "01",
@@ -133,37 +133,78 @@ export default function Process() {
           <div className="text-center mb-12">
             <h3 className="heading-md mb-6">散骨エリア</h3>
             <p className="text-lg text-body max-w-2xl mx-auto">
-              広島湾の美しい海域で散骨セレモニーを行います。<br />
-              穏やかで透明度の高い海で、故人様を自然の中へとお送りいたします。
+              美しい海域で散骨セレモニーを行います。<br />
+              穏やかで美しい広島湾で、故人様を自然の中へとお送りいたします。
             </p>
           </div>
           
-          <div className="bg-white rounded-lg shadow-natural border border-gray-100 p-6">
-            <div className="aspect-video rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52563.89234!2d132.4!3d34.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE4JzAwLjAiTiAxMzLCsDI0JzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
-                width="100%" 
-                height="100%" 
-                style={{border: 0}}
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="散骨エリア - 広島湾"
-              ></iframe>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 広島エリア */}
+            <div className="bg-white rounded-lg shadow-natural border border-gray-100 p-6">
+              <h4 className="text-xl font-medium text-gray-900 mb-4 text-center">広島エリア</h4>
+              <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52563.89234!2d132.4!3d34.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE4JzAwLjAiTiAxMzLCsDI0JzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+                  width="100%" 
+                  height="100%" 
+                  style={{border: 0}}
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="散骨エリア - 広島湾"
+                ></iframe>
+              </div>
+              <p className="text-body text-sm mb-4">
+                広島の美しい海域での散骨。瀬戸内海の穏やかな環境で心安らぐセレモニーを行います。
+              </p>
+              <div className="text-center">
+                <a 
+                  href="https://maps.app.goo.gl/WPBrFLwkLCTAWMVo7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-ocean-600 hover:text-ocean-700 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Googleマップで詳細を見る
+                </a>
+              </div>
             </div>
-            <div className="mt-4 text-center">
-              <a 
-                href="https://maps.app.goo.gl/WPBrFLwkLCTAWMVo7" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-ocean-600 hover:text-ocean-700 transition-colors"
-              >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Googleマップで詳細を見る
-              </a>
+
+            {/* 呉エリア */}
+            <div className="bg-white rounded-lg shadow-natural border border-gray-100 p-6">
+              <h4 className="text-xl font-medium text-gray-900 mb-4 text-center">呉エリア</h4>
+              <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26160.123456789!2d132.51089!3d34.22072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f11.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDEzJzE0LjYiTiAxMzLCsDMwJzM5LjIiRQ!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+                  width="100%" 
+                  height="100%" 
+                  style={{border: 0}}
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="呉エリア - 34°13'14.6&quot;N 132°30'39.2&quot;E"
+                ></iframe>
+              </div>
+              <p className="text-body text-sm mb-4">
+                呉の美しい海域での散骨エリア。歴史ある港町呉の穏やかな海で、心安らぐセレモニーを行います。
+              </p>
+              <div className="text-center">
+                <a 
+                  href="https://maps.app.goo.gl/GE8wyHrcBedLBUvd8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-ocean-600 hover:text-ocean-700 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Googleマップで詳細を見る
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -195,9 +236,12 @@ export default function Process() {
           </div>
 
           <div className="text-center">
-            <a href="tel:0120-123-456" className="btn-primary">
+            <button 
+              className="btn-primary"
+              onClick={() => onOpenContactForm && onOpenContactForm()}
+            >
               その他のご質問・ご相談
-            </a>
+            </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import ocean04 from '../assets/images/ocean-04.jpg'
 
-export default function Plans() {
+export default function Plans({ onOpenEstimateForm }) {
   const plans = [
     {
       name: "ファミリープラン",
@@ -168,8 +168,11 @@ export default function Plans() {
               </ul>
 
               <div className="text-center">
-                <button className={`${plan.isPopular ? 'btn-primary' : 'btn-secondary'} w-full text-sm`}>
-                  {plan.name === "ペット貸切散骨プラン" ? "詳しくはこちら" : "詳細・お見積り"}
+                <button 
+                  className={`${plan.isPopular ? 'btn-primary' : 'btn-secondary'} w-full text-sm`}
+                  onClick={() => onOpenEstimateForm && onOpenEstimateForm(plan.name)}
+                >
+                  お見積り
                 </button>
               </div>
             </div>
