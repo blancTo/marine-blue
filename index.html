@@ -8,5 +8,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Netlify Forms用の静的フォーム（非表示） -->
+    <form name="estimate-form" method="POST" data-netlify="true" style="display: none;">
+      <input type="hidden" name="form-name" value="estimate-form" />
+      <input name="plan" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="participants" />
+      <input name="preferredDate" />
+      <textarea name="requests"></textarea>
+    </form>
+    
+    <form name="contact-form" method="POST" data-netlify="true" style="display: none;">
+      <input type="hidden" name="form-name" value="contact-form" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="subject" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

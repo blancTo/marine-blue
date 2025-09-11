@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ onOpenContactForm }) {
   return (
     <footer className="bg-ocean-600 text-white section-padding">
       <div className="container-max">
@@ -62,7 +62,10 @@ export default function Footer() {
               <a href="tel:0120-123-456" className="bg-white text-ocean-600 px-6 py-3 rounded-sm font-medium hover:bg-white/90 transition-colors">
                 お電話でのご相談
               </a>
-              <button className="border border-white/30 text-white px-6 py-3 rounded-sm font-medium hover:bg-white/10 transition-colors">
+              <button 
+                className="border border-white/30 text-white px-6 py-3 rounded-sm font-medium hover:bg-white/10 transition-colors"
+                onClick={() => onOpenContactForm && onOpenContactForm()}
+              >
                 メールでのお問い合わせ
               </button>
             </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function Header() {
+export default function Header({ onOpenContactForm }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -74,7 +74,10 @@ export default function Header() {
               </svg>
               <span className="text-sm font-medium">0120-123-456</span>
             </a>
-            <button className="btn-primary text-sm px-6 py-3">
+            <button 
+              className="btn-primary text-sm px-6 py-3"
+              onClick={() => onOpenContactForm && onOpenContactForm()}
+            >
               お問い合わせ
             </button>
           </div>
