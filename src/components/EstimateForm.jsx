@@ -69,22 +69,22 @@ export default function EstimateForm({ selectedPlan, onClose }) {
     setIsSubmitting(true)
 
     try {
-      // Netlify Forms用のフォームデータを作成
-      const formDataForNetlify = new FormData()
-      formDataForNetlify.append('form-name', 'estimate-form')
-      formDataForNetlify.append('plan', formData.plan)
-      formDataForNetlify.append('name', formData.name)
-      formDataForNetlify.append('email', formData.email)
-      formDataForNetlify.append('phone', formData.phone)
-      formDataForNetlify.append('participants', formData.participants)
-      formDataForNetlify.append('preferredDate', formData.preferredDate)
-      formDataForNetlify.append('requests', formData.requests)
+      // Netlify Forms用のデータを作成
+      const params = new URLSearchParams()
+      params.append('form-name', 'estimate-form')
+      params.append('plan', formData.plan)
+      params.append('name', formData.name)
+      params.append('email', formData.email)
+      params.append('phone', formData.phone)
+      params.append('participants', formData.participants)
+      params.append('preferredDate', formData.preferredDate)
+      params.append('requests', formData.requests)
 
       // Netlify Formsに送信
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataForNetlify).toString()
+        body: params
       })
 
       if (response.ok) {

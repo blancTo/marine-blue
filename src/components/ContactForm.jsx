@@ -68,21 +68,25 @@ export default function ContactForm({ onClose }) {
     setIsSubmitting(true)
 
     try {
-      // Netlify Forms用のフォームデータを作成
-      const formDataForNetlify = new FormData()
-      formDataForNetlify.append('form-name', 'contact-form')
-      formDataForNetlify.append('name', formData.name)
-      formDataForNetlify.append('email', formData.email)
-      formDataForNetlify.append('phone', formData.phone)
-      formDataForNetlify.append('subject', formData.subject)
-      formDataForNetlify.append('message', formData.message)
+      // Netlify Forms用のデータを作成
+      const params = new URLSearchParams()
+      params.append('form-name', 'contact-form')
+      params.append('name', formData.name)
+      params.append('email', formData.email)
+      params.append('phone', formData.phone)
+      params.append('subject', formData.subject)
+      params.append('message', formData.message)
+
+      console.log('送信データ:', Object.fromEntries(params))
 
       // Netlify Formsに送信
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataForNetlify).toString()
+        body: params
       })
+
+      console.log('レスポンス:', response.status, response.statusText)
 
       if (response.ok) {
         // 送信成功のメッセージを表示
@@ -102,11 +106,13 @@ export default function ContactForm({ onClose }) {
           onClose()
         }
       } else {
-        throw new Error('送信に失敗しました')
+        const errorText = await response.text()
+        console.error('送信エラー詳細:', errorText)
+        throw new Error(`送信に失敗しました: ${response.status} ${response.statusText}`)
       }
     } catch (error) {
       console.error('送信エラー:', error)
-      alert('送信に失敗しました。しばらく経ってから再度お試しください。')
+      alert(`送信に失敗しました。エラー: ${error.message}\nしばらく経ってから再度お試しください。`)
     } finally {
       setIsSubmitting(false)
     }
