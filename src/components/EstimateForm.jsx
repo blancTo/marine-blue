@@ -13,6 +13,7 @@ export default function EstimateForm({ selectedPlan, onClose }) {
 
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const plans = [
     'ファミリープラン',
@@ -87,25 +88,9 @@ export default function EstimateForm({ selectedPlan, onClose }) {
         body: params
       })
 
-      if (response.ok) {
-        // 送信成功のメッセージを表示
-        alert('お見積り依頼を承りました。3営業日以内にご連絡いたします。')
-        
-        // フォームをリセット
-        setFormData({
-          plan: '',
-          name: '',
-          email: '',
-          phone: '',
-          participants: '',
-          preferredDate: '',
-          requests: ''
-        })
-        
-        // フォームを閉じる
-        if (onClose) {
-          onClose()
-        }
+       if (response.ok) {
+         // 送信成功状態に変更
+         setIsSubmitted(true)
       } else {
         throw new Error('送信に失敗しました')
       }
@@ -115,6 +100,113 @@ export default function EstimateForm({ selectedPlan, onClose }) {
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  // 送信完了後の確認画面
+  if (isSubmitted) {
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="p-8 text-center">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            
+            <h2 className="text-2xl font-medium text-gray-900 mb-4">
+              お見積り依頼を承りました
+            </h2>
+            
+            <div className="text-left bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="font-medium text-gray-900 mb-4">送信内容の確認</h3>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <span className="font-medium text-gray-700">ご希望のプラン：</span>
+                  <span className="text-gray-900">{formData.plan}</span>
+                </div>
+                <div>
+                  <span className="font-medium text-gray-700">お名前：</span>
+                  <span className="text-gray-900">{formData.name}</span>
+                </div>
+                <div>
+                  <span className="font-medium text-gray-700">メールアドレス：</span>
+                  <span className="text-gray-900">{formData.email}</span>
+                </div>
+                {formData.phone && (
+                  <div>
+                    <span className="font-medium text-gray-700">電話番号：</span>
+                    <span className="text-gray-900">{formData.phone}</span>
+                  </div>
+                )}
+                {formData.participants && (
+                  <div>
+                    <span className="font-medium text-gray-700">参加予定人数：</span>
+                    <span className="text-gray-900">{formData.participants}名</span>
+                  </div>
+                )}
+                {formData.preferredDate && (
+                  <div>
+                    <span className="font-medium text-gray-700">ご希望日：</span>
+                    <span className="text-gray-900">{formData.preferredDate}</span>
+                  </div>
+                )}
+                {formData.requests && (
+                  <div>
+                    <span className="font-medium text-gray-700">ご要望・ご質問：</span>
+                    <div className="text-gray-900 mt-1 whitespace-pre-wrap">{formData.requests}</div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-lg p-6 mb-6 text-left">
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <h4 className="font-medium text-blue-900 mb-2">今後の流れ</h4>
+                  <ul className="text-sm text-blue-800 space-y-1">
+                    <li>• 担当者がお見積りを作成いたします</li>
+                    <li>• 3営業日以内に {formData.email} に詳細なお見積りをお送りします</li>
+                    <li>• ご不明な点がございましたら 0120-123-456 までお電話ください</li>
+                    <li>• お見積りは無料です</li>
+                    <li>• 迷惑メールフォルダもご確認ください</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <button
+                onClick={() => {
+                  setIsSubmitted(false)
+                  setFormData({
+                    plan: selectedPlan || '',
+                    name: '',
+                    email: '',
+                    phone: '',
+                    participants: '',
+                    preferredDate: '',
+                    requests: ''
+                  })
+                }}
+                className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                新しいお見積り依頼
+              </button>
+              <button
+                onClick={onClose}
+                className="flex-1 px-6 py-3 bg-ocean-600 text-white rounded-lg hover:bg-ocean-700 transition-colors"
+              >
+                閉じる
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
