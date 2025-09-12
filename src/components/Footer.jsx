@@ -19,11 +19,11 @@ export default function Footer({ onOpenContactForm }) {
               大切な方との最後のお別れを、美しい海で。豊富な実績と信頼で、ご遺族の想いに寄り添います。
             </p>
             <div className="space-y-3">
-              <a href="tel:0120-123-456" className="flex items-center text-white hover:text-white/80 transition-colors">
+              <a href="tel:0120-28-3374" className="flex items-center text-white hover:text-white/80 transition-colors">
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                0120-123-456（フリーダイヤル）
+                0120-28-3374（フリーダイヤル）
               </a>
               <p className="text-white/60 text-sm">お電話：8:00～20:00　メール：24時間対応</p>
             </div>
@@ -59,7 +59,7 @@ export default function Footer({ onOpenContactForm }) {
               経験豊富なスタッフが丁寧にお答えいたします。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:0120-123-456" className="bg-white text-ocean-600 px-6 py-3 rounded-sm font-medium hover:bg-white/90 transition-colors">
+              <a href="tel:0120-28-3374" className="bg-white text-ocean-600 px-6 py-3 rounded-sm font-medium hover:bg-white/90 transition-colors">
                 お電話でのご相談
               </a>
               <button 
