@@ -159,7 +159,7 @@ export default function ContactForm({ onClose }) {
                   <ul className="text-sm text-blue-800 space-y-1">
                     <li>• 担当者が内容を確認いたします</li>
                     <li>• 2営業日以内に {formData.email} にご返信いたします</li>
-                    <li>• お急ぎの場合は 0120-28-3374 までお電話ください</li>
+                    <li>• お急ぎの場合は 090-6845-2863 までお電話ください</li>
                     <li>• 迷惑メールフォルダもご確認ください</li>
                   </ul>
                 </div>
