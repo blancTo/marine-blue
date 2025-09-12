@@ -40,7 +40,7 @@ export default function Access({ onOpenContactForm }) {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">登録事業</h4>
-                    <p className="text-body">海上運送　一般不定期航路事業登録済み</p>
+                    <p className="text-body">中国運輸局　内航一般不定期航路事業登録済み</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -64,8 +64,8 @@ export default function Access({ onOpenContactForm }) {
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">電話番号</h4>
                     <p className="text-body">
-                      <a href="tel:0120-123-456" className="text-ocean-600 hover:text-ocean-700 transition-colors">
-                        0120-123-456（フリーダイヤル）
+                      <a href="tel:0120-28-3374" className="text-ocean-600 hover:text-ocean-700 transition-colors">
+                        0120-28-3374（フリーダイヤル）
                       </a>
                     </p>
                   </div>
@@ -170,7 +170,7 @@ export default function Access({ onOpenContactForm }) {
                 お気軽にお問い合わせください。
               </p>
               <div className="space-y-4">
-                <a href="tel:0120-123-456" className="btn-primary w-full text-center flex items-center justify-center">
+                <a href="tel:0120-28-3374" className="btn-primary w-full text-center flex items-center justify-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
