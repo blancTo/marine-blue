@@ -219,7 +219,7 @@ export default function Plans({ onOpenEstimateForm }) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:0120-123-456" className="btn-primary text-center">
+            <a href="tel:0120-28-3374" className="btn-primary text-center">
               お電話でお見積り
             </a>
             <button className="btn-secondary">
