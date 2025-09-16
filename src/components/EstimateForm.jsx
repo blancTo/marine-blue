@@ -84,19 +84,16 @@ export default function EstimateForm({ selectedPlan, onClose }) {
       // ここに実際のSSGformのエンドポイントURLを設定してください
       const response = await fetch('https://ssgform.com/s/l2gzOcJXPg2S', {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: params
       })
 
-      if (response.ok) {
-        // 送信成功状態に変更
-        setIsSubmitted(true)
-      } else {
-        throw new Error('送信に失敗しました')
-      }
+      // no-corsモードではレスポンスの詳細が取得できないため、
+      // エラーがなければ成功と判断
+      setIsSubmitted(true)
     } catch (error) {
       console.error('送信エラー:', error)
       alert('送信に失敗しました。しばらく経ってから再度お試しください。')

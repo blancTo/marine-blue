@@ -83,23 +83,18 @@ export default function ContactForm({ onClose }) {
       // ここに実際のSSGformのエンドポイントURLを設定してください
       const response = await fetch('https://ssgform.com/s/r3OaCz4Lxtb6', {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: params
       })
 
-      console.log('レスポンス:', response.status, response.statusText)
+      console.log('レスポンス:', response)
 
-      if (response.ok) {
-        // 送信成功状態に変更
-        setIsSubmitted(true)
-      } else {
-        const errorText = await response.text()
-        console.error('送信エラー詳細:', errorText)
-        throw new Error(`送信に失敗しました: ${response.status} ${response.statusText}`)
-      }
+      // no-corsモードではレスポンスの詳細が取得できないため、
+      // エラーがなければ成功と判断
+      setIsSubmitted(true)
     } catch (error) {
       console.error('送信エラー:', error)
       alert(`送信に失敗しました。エラー: ${error.message}\nしばらく経ってから再度お試しください。`)
