@@ -172,7 +172,23 @@ export default function EstimateForm({ selectedPlan, onClose }) {
                     <li>• 3営業日以内に {formData.email} に詳細なお見積りをお送りします</li>
                     <li>• ご不明な点がございましたら 090-6845-2863 までお電話ください</li>
                     <li>• お見積りは無料です</li>
-                    <li>• 迷惑メールフォルダもご確認ください</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 rounded-lg p-6 mb-6 text-left">
+              <div className="flex items-start space-x-3">
+                <svg className="w-6 h-6 text-yellow-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <div>
+                  <h4 className="font-medium text-yellow-900 mb-2">自動返信メールについて</h4>
+                  <ul className="text-sm text-yellow-800 space-y-1">
+                    <li>• 自動返信メールを {formData.email} に送信しました</li>
+                    <li>• <strong>迷惑メールフォルダをご確認ください</strong></li>
+                    <li>• Gmailをご利用の場合は「すべてのメール」もご確認ください</li>
+                    <li>• 10分経っても届かない場合は、メールアドレスをご確認ください</li>
                   </ul>
                 </div>
               </div>
