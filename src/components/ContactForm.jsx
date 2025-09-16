@@ -71,11 +71,11 @@ export default function ContactForm({ onClose }) {
     try {
       // SSGform用のデータを作成
       const params = new URLSearchParams()
-      params.append('name', formData.name)
-      params.append('email', formData.email)
-      params.append('phone', formData.phone)
-      params.append('subject', formData.subject)
-      params.append('message', formData.message)
+      params.append('お名前', formData.name)
+      params.append('メールアドレス', formData.email)
+      params.append('電話番号', formData.phone)
+      params.append('お問い合わせ内容', formData.subject)
+      params.append('メッセージ', formData.message)
 
       console.log('送信データ:', Object.fromEntries(params))
 

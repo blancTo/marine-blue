@@ -72,13 +72,13 @@ export default function EstimateForm({ selectedPlan, onClose }) {
     try {
       // SSGform用のデータを作成
       const params = new URLSearchParams()
-      params.append('plan', formData.plan)
-      params.append('name', formData.name)
-      params.append('email', formData.email)
-      params.append('phone', formData.phone)
-      params.append('participants', formData.participants)
-      params.append('preferredDate', formData.preferredDate)
-      params.append('requests', formData.requests)
+      params.append('ご希望プラン', formData.plan)
+      params.append('お名前', formData.name)
+      params.append('メールアドレス', formData.email)  
+      params.append('電話番号', formData.phone)
+      params.append('参加予定人数', formData.participants)
+      params.append('ご希望日', formData.preferredDate)
+      params.append('ご要望・ご質問', formData.requests)
 
       // SSGformに送信
       // ここに実際のSSGformのエンドポイントURLを設定してください
