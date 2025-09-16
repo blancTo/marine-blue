@@ -69,9 +69,8 @@ export default function ContactForm({ onClose }) {
     setIsSubmitting(true)
 
     try {
-      // Netlify Forms用のデータを作成
+      // SSGform用のデータを作成
       const params = new URLSearchParams()
-      params.append('form-name', 'contact-form')
       params.append('name', formData.name)
       params.append('email', formData.email)
       params.append('phone', formData.phone)
@@ -80,18 +79,22 @@ export default function ContactForm({ onClose }) {
 
       console.log('送信データ:', Object.fromEntries(params))
 
-      // Netlify Formsに送信
-      const response = await fetch('/', {
+      // SSGformに送信
+      // ここに実際のSSGformのエンドポイントURLを設定してください
+      const response = await fetch('https://ssgform.com/s/r3OaCz4Lxtb6', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        },
         body: params
       })
 
       console.log('レスポンス:', response.status, response.statusText)
 
-       if (response.ok) {
-         // 送信成功状態に変更
-         setIsSubmitted(true)
+      if (response.ok) {
+        // 送信成功状態に変更
+        setIsSubmitted(true)
       } else {
         const errorText = await response.text()
         console.error('送信エラー詳細:', errorText)
@@ -215,8 +218,7 @@ export default function ContactForm({ onClose }) {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-6" name="contact-form" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact-form" />
+        <form onSubmit={handleSubmit} className="p-6 space-y-6">
           {/* お名前 */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
