@@ -70,9 +70,8 @@ export default function EstimateForm({ selectedPlan, onClose }) {
     setIsSubmitting(true)
 
     try {
-      // Netlify Forms用のデータを作成
+      // SSGform用のデータを作成
       const params = new URLSearchParams()
-      params.append('form-name', 'estimate-form')
       params.append('plan', formData.plan)
       params.append('name', formData.name)
       params.append('email', formData.email)
@@ -81,16 +80,20 @@ export default function EstimateForm({ selectedPlan, onClose }) {
       params.append('preferredDate', formData.preferredDate)
       params.append('requests', formData.requests)
 
-      // Netlify Formsに送信
-      const response = await fetch('/', {
+      // SSGformに送信
+      // ここに実際のSSGformのエンドポイントURLを設定してください
+      const response = await fetch('https://ssgform.com/s/l2gzOcJXPg2S', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        },
         body: params
       })
 
-       if (response.ok) {
-         // 送信成功状態に変更
-         setIsSubmitted(true)
+      if (response.ok) {
+        // 送信成功状態に変更
+        setIsSubmitted(true)
       } else {
         throw new Error('送信に失敗しました')
       }
@@ -170,7 +173,7 @@ export default function EstimateForm({ selectedPlan, onClose }) {
                   <ul className="text-sm text-blue-800 space-y-1">
                     <li>• 担当者がお見積りを作成いたします</li>
                     <li>• 3営業日以内に {formData.email} に詳細なお見積りをお送りします</li>
-                    <li>• ご不明な点がございましたら 0120-28-3374 までお電話ください</li>
+                    <li>• ご不明な点がございましたら 090-6845-2863 までお電話ください</li>
                     <li>• お見積りは無料です</li>
                     <li>• 迷惑メールフォルダもご確認ください</li>
                   </ul>
@@ -229,8 +232,7 @@ export default function EstimateForm({ selectedPlan, onClose }) {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-6" name="estimate-form" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="estimate-form" />
+        <form onSubmit={handleSubmit} className="p-6 space-y-6">
           {/* プラン選択 */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
