@@ -170,7 +170,7 @@ export default function EstimateForm({ selectedPlan, onClose }) {
                   <ul className="text-sm text-blue-800 space-y-1">
                     <li>• 担当者がお見積りを作成いたします</li>
                     <li>• 3営業日以内に {formData.email} に詳細なお見積りをお送りします</li>
-                    <li>• ご不明な点がございましたら 090-6845-2863 までお電話ください</li>
+                    <li>• ご不明な点がございましたら 0120-28-3374 までお電話ください</li>
                     <li>• お見積りは無料です</li>
                   </ul>
                 </div>
