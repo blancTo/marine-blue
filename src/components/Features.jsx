@@ -25,7 +25,7 @@ export default function Features() {
       description: "最大7名乗船可能な小型船で、きめ細やかな配慮と安全性を重視した運航です。",
       icon: (
         <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
         </svg>
       )
     },
@@ -43,7 +43,7 @@ export default function Features() {
       description: "透明度の高い美しい海域で、故人様を自然の中へと送り出すセレモニーを行います。",
       icon: (
         <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a1.5 1.5 0 000-3H9v3zm2.5 2.5v5m0 0h2m-2 0H12m1-8h.01" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 16s1.5-2 4-2 4 2 4 2m-8-6h.01M16 10h.01M12 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
         </svg>
       )
     },
@@ -79,13 +79,14 @@ export default function Features() {
               私たちは故人様とご遺族の想いを大切に、心に残るセレモニーをお手伝いいたします。
               豊富な実績と経験で、ご家族の想いに寄り添った散骨セレモニーを実現いたします。
             </p>
+
           </div>
           <div className="order-1 lg:order-2">
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-soft-lg">
-                <img 
-                  src={ocean01} 
-                  alt="信頼の実績を表す美しい海の景色" 
+                <img
+                  src={ocean01}
+                  alt="信頼の実績を表す美しい海の景色"
                   className="w-full h-full object-cover"
                 />
               </div>

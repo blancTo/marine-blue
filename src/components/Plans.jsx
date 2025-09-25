@@ -62,44 +62,23 @@ export default function Plans({ onOpenEstimateForm }) {
     {
       name: "ペット貸切散骨プラン",
       price: "155,000円（税込）",
-      description: "飼主様とご一緒に沖へ船で出て、飼主様に散骨していただくペット同行散骨プラン",
+      description: "飼主様とご一緒に沖へ船で出て散骨していただくプラン",
       features: [
         "乗船人数3名まで",
-        "お客様のご都合に合わせて日程決定",
-        "広島湾の乗船場所から出航",
+        "日程はお客様のご都合に合わせて決定",
+        "広島湾から出航",
         "船舶2艇をご用意",
         "乗船時間 約60分～90分",
-        "洗骨・粉骨加工",
-        "水溶性袋×1",
-        "献花用花籠×1",
-        "献酒・献水×1",
-        "写真撮影",
-        "散骨証明書×1",
-        "船舶チャーターに関する一切の費用"
+        "洗骨・粉骨加工込み",
+        "水溶性袋・献花・献酒付き",
+        "写真撮影サービス",
+        "散骨証明書発行",
+        "船舶チャーター費用込み"
       ],
       isPopular: false,
       icon: (
         <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3s-4.5 4.03-4.5 9 2.015 9 4.5 9zm0 0V9m0 12l-2-2m2 2l2-2m-2 4v-4" />
-        </svg>
-      )
-    },
-    {
-      name: "粉骨プラン",
-      price: "22,000円（税込）",
-      description: "お骨を洗い除菌後に六価クロム検査をおこなったあとに乾燥機に掛けて粉骨を施し、水溶性の袋へパッキング",
-      features: [
-        "洗骨・除菌処理",
-        "六価クロム検査",
-        "乾燥機による処理",
-        "粉骨加工",
-        "水溶性袋へのパッキング",
-        "送料は別途実費請求"
-      ],
-      isPopular: false,
-      icon: (
-        <svg className="w-8 h-8 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       )
     }
@@ -136,7 +115,7 @@ export default function Plans({ onOpenEstimateForm }) {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {plans.map((plan, index) => (
             <div key={index} className={`card relative ${plan.isPopular ? 'ring-2 ring-ocean-300 ring-opacity-50' : ''}`}>
               {plan.isPopular && (
