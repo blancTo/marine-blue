@@ -40,7 +40,7 @@ export default function Access({ onOpenContactForm }) {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">登録事業</h4>
-                    <p className="text-body">中国運輸局　内航一般不定期航路事業登録済み</p>
+                    <p className="text-body">中国運輸局　内航一般不定期航路事業登録済み<br />登録番号　中国一不第０００９号</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -89,7 +89,7 @@ export default function Access({ onOpenContactForm }) {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-1">主要事業</h4>
-                    <p className="text-body">主要旅客船<br />海洋散骨事業<br />チャーター船<br />観光船<br />海上タクシー</p>
+                    <p className="text-body">主要旅客船<br />海洋散骨事業<br />チャーター船<br />観光船<br />海上タクシー<br />遊漁船</p>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Access({ onOpenContactForm }) {
             </div>
             
             <div className="text-center mb-8">
-              <h4 className="text-lg font-medium mb-2 text-gray-900">私たちの散骨船とサービス</h4>
+              <h4 className="text-lg font-medium mb-2 text-gray-900">私たちの自社船とサービス</h4>
               <p className="text-body">7名乗船可能な小型船で、アットホームな心に残るセレモニーを</p>
             </div>
 
