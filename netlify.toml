@@ -2,3 +2,22 @@
   publish = "dist"
   command = "npm run build"
 
+# リダイレクト設定 - すべてのバリエーションを https://marineblue-sea.com に統一
+[[redirects]]
+  from = "http://marineblue-sea.com/*"
+  to = "https://marineblue-sea.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.marineblue-sea.com/*"
+  to = "https://marineblue-sea.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.marineblue-sea.com/*"
+  to = "https://marineblue-sea.com/:splat"
+  status = 301
+  force = true
+
