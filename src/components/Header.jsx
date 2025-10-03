@@ -19,7 +19,7 @@ export default function Header({ onOpenContactForm }) {
       <div className="container-max px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
         <div className="flex items-center justify-between h-20">
           {/* ロゴ */}
-          <div className="flex items-center space-x-3">
+          <a href="#" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
             <div className="w-10 h-10 bg-ocean-600 rounded-full flex items-center justify-center">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -33,7 +33,7 @@ export default function Header({ onOpenContactForm }) {
                 isScrolled ? 'text-gray-500' : 'text-white/80'
               }`}>海洋散骨サービス</p>
             </div>
-          </div>
+          </a>
 
           {/* ナビゲーション */}
           <nav className="hidden md:flex items-center space-x-12">
@@ -99,19 +99,19 @@ export default function Header({ onOpenContactForm }) {
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-gray-100 bg-white rounded-b-lg shadow-soft-lg">
             <nav className="flex flex-col space-y-4">
-              <a href="#about" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium">
+              <a href="#about" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
                 サービスについて
               </a>
-              <a href="#features" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium">
+              <a href="#features" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
                 特徴
               </a>
-              <a href="#plans" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium">
+              <a href="#plans" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
                 料金プラン
               </a>
-              <a href="#process" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium">
+              <a href="#process" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
                 流れ
               </a>
-              <a href="#access" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium">
+              <a href="#access" className="text-gray-600 hover:text-ocean-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>
                 アクセス
               </a>
               <div className="pt-4 border-t border-gray-100">
