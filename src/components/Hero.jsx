@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* CTAボタン */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-20">
+      <div className="absolute bottom-12 sm:bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-20">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
           <a href="#plans" className="btn-primary text-base sm:text-lg w-full sm:w-auto shadow-lg text-center">
             料金プランを見る
